@@ -59,8 +59,6 @@ class CountBytesCommandTest {
         System.setOut(new PrintStream(outContent));
         command.execute();
         assertEquals("13 \n", outContent.toString());
-        System.setIn(System.in);
-        System.setOut(System.out);
     }
 
     @Test
@@ -73,7 +71,5 @@ class CountBytesCommandTest {
         System.setOut(new PrintStream(outContent));
         command.execute();
         assertEquals("Error: No input provided\n0 \n", outContent.toString());
-        System.setIn(System.in);
-        System.setOut(System.out);
     }
 }
